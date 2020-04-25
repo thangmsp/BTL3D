@@ -104,17 +104,18 @@ void OnKeyDown(unsigned char ch, int x, int y)
     switch (ch)
     {
     case 'w':
-        //detal_moving = 0.1;
+        g_x += 1.2;
         break;
     case 's':
-        //detal_moving -= 0.1;
+        g_x -= 1.2;
         break;
     case 'a':
-        //angle_car -= 3;
+        g_y += 0.2;
         break;
     case 'd':
-        //angle_car = 3;
+        g_y -= 0.2;
         break;
+
     default:
         break;
     }
@@ -205,14 +206,11 @@ void Init()
     g_x = 10 * sin(angle);
     g_z = 10 * cos(angle);
     t_ground = new Texture(texture_name, GL_TEXTURE_2D);
-
-
     t1 = new Texture(texture_name_car1, GL_TEXTURE_2D);
     t2 = new Texture(texture_name_car2, GL_TEXTURE_2D);
     t3 = new Texture(texture_name_car3, GL_TEXTURE_2D);
     t4 = new Texture(texture_name_car4, GL_TEXTURE_2D);
     t5 = new Texture(texture_name_car5, GL_TEXTURE_2D);
-
     car = new Car(t1, t2, t3, t4, t5, 0.4, 0, 4, 1.3, 0.7, 1.5);
 
 
@@ -256,7 +254,7 @@ void RenderScene()
     //face 1
     t_ground->Bin();
     glCallList(ground);
-    t_ground->UnBin();
+    //t_ground->UnBin();
     glDisable(GL_TEXTURE_2D);
 
     glPopMatrix();
@@ -271,7 +269,7 @@ int main(int a, char** b)
 {
     glutInit(&a, b);
     glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
-    glutInitWindowSize(1000, 800);
+    glutInitWindowSize(1280, 720);
     glutInitWindowPosition(100, 100);
     glutCreateWindow("Opengl Study");
 
