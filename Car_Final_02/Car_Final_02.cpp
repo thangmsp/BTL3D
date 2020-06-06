@@ -20,11 +20,11 @@ Car* car;
 
 
 char texture_name[100] = { "text01.bmp" }; // lưu trữ tên file texture
-char texture_name_car1[100] = { "car4.bmp" };
-char texture_name_car2[100] = { "car3.bmp" };
-char texture_name_car3[100] = { "car1.bmp" };
-char texture_name_car4[100] = { "car2.bmp" };
-char texture_name_car5[100] = { "car5.bmp" };
+char texture_name_car1[100] = { "car44.bmp" };
+char texture_name_car2[100] = { "car33.bmp" };
+char texture_name_car3[100] = { "car11.bmp" };
+char texture_name_car4[100] = { "car22.bmp" };
+char texture_name_car5[100] = { "car55.bmp" };
 
 float g_x = 5.0;
 float g_z = 0.0;
@@ -254,7 +254,7 @@ void RenderScene()
     //face 1
     t_ground->Bin();
     glCallList(ground);
-    //t_ground->UnBin();
+    t_ground->UnBin();
     glDisable(GL_TEXTURE_2D);
 
     glPopMatrix();

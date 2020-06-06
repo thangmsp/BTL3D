@@ -21,7 +21,7 @@ public:
     static GLuint MakeCar3(const float length, const float width, const float height);
     static GLuint MakeCar4(const float length, const float width, const float height);
     static GLuint MakeCar5(const float length, const float width, const float height);
-
+    
     void setRect(float x, float y, float z)
     {
         this->rect_.x = x;

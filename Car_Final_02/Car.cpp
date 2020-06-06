@@ -50,27 +50,27 @@ void Car::CreateCar()
 	//face 1
 	texture1->Bin();
 	glCallList(car1);
-	//texture1->UnBin();
+	texture1->UnBin();
 
 	//face 2
 	texture2->Bin();
 	glCallList(car2);
-	//texture2->UnBin();
+	texture2->UnBin();
 
 	//face 3
 	texture3->Bin();
 	glCallList(car3);
-	//texture3->UnBin();
+	texture3->UnBin();
 
 	//face 4
 	texture4->Bin();
 	glCallList(car4);
-	//texture4->UnBin();
+	texture4->UnBin();
 	
 	//face 5
 	texture5->Bin();
 	glCallList(car5);
-	//texture5->UnBin();
+	texture5->UnBin();
 
 	glDisable(GL_TEXTURE_2D);
 	//glEnable(GL_LIGHTING);
@@ -91,7 +91,6 @@ GLuint Car::MakeCar1(const float length, const float width, const float height)
 	glTexCoord2f(0.0f, 1.0f); glVertex3f(-x, y, z);
 	glTexCoord2f(1.0f, 1.0f); glVertex3f(x, y, z);
 	glTexCoord2f(1.0f, 0.0f); glVertex3f(x, 0, z);
-	glEnd();
 
 
 	glEnd();
@@ -117,7 +116,6 @@ GLuint Car::MakeCar2(const float length, const float width, const float height)
 	glTexCoord2f(0.0f, 0.0f);  glVertex3f(-x, 0, -z);
 	glTexCoord2f(0.0f, 1.0f);  glVertex3f(-x, y, -z);
 	glTexCoord2f(1.0f, 1.0f);  glVertex3f(x, y, -z);
-	glEnd();
 
 	glEnd();
 
@@ -142,8 +140,6 @@ GLuint Car::MakeCar3(const float length, const float width, const float height)
 	glTexCoord2f(1.0f, 0.0f); glVertex3f(-x, 0, z);
 	glTexCoord2f(1.0f, 1.0f); glVertex3f(-x, y, z);
 	glTexCoord2f(0.0f, 1.0f); glVertex3f(-x, y, -z);
-	glEnd();
-
 
 
 	glEnd();
@@ -171,8 +167,6 @@ GLuint Car::MakeCar4(const float length, const float width, const float height)
 	glTexCoord2f(0.0f, 1.0f); glVertex3f(x, y, z);
 	glEnd();
 
-
-	glEnd();
 
 	glEndList();
 
